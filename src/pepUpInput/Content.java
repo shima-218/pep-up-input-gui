@@ -35,7 +35,6 @@ public abstract class Content {
 					continue;
 				}
 				//日付クリック
-				//actions.moveToElement(btn).moveByOffset(1,1).click().perform();
 				btn.click();
 				//入力
 				this.dayInput(driver);

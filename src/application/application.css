@@ -1,0 +1,23 @@
+.root { -fx-background-color: white;}
+
+.button { -fx-background-color: gainsboro;
+          -fx-text-fill: black;}
+.button:hover{ -fx-background-color: silver;
+          -fx-text-fill: black;}
+.button:pressed{ -fx-background-color: darkgray;
+          -fx-text-fill: black;}
+
+.check-box { -fx-background-color: white;
+			}
+
+.choice-box { -fx-background-color: white;
+			 -fx-border-color: silver;
+			 -fx-border-radius: 3px}
+
+.text-field{ -fx-background-color: white;
+			 -fx-border-color: silver;
+			 -fx-border-radius: 3px}
+
+.password-field{ -fx-background-color: white;
+				 -fx-border-color: silver;
+			 	-fx-border-radius: 3px}
