@@ -10,7 +10,7 @@ public abstract class Content {
 
 	public void input(WebDriver driver,Actions actions,int number) {
 		//該当のエリアがあるか判定
-		String areaXpath = "//div[@id='app']/div/div/div[2]/div/div[2]/div/div[" + number + "]";
+		String areaXpath = "//div[@id='app']/div/div[2]/div/div[2]/div/div[" + number + "]";
 		WebElement area = null;
 		try {
 			area = driver.findElement(By.xpath(areaXpath));
@@ -27,7 +27,7 @@ public abstract class Content {
 					actions.perform();
 				}
 				//クリックすべき日付を探す
-				String dayXpath = "//div[@id='app']/div/div/div[2]/div/div[2]/div/div[" + number + "]/div[2]/div/div[2]/div[2]/div[" + weekloop + "]/div[" + dayloop +"]/button";
+				String dayXpath = "//div[@id='app']/div/div[2]/div/div[2]/div/div[" + number + "]/div[2]/div/div[2]/div[2]/div[" + weekloop + "]/div[" + dayloop +"]/button";
 				WebElement btn = null;
 				try {
 					btn = driver.findElement(By.xpath(dayXpath));
