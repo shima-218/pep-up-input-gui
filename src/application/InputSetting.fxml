@@ -1,22 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InputSettingController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InputSettingController">
    <children>
-      <ScrollPane layoutX="130.0" layoutY="14.0" prefHeight="422.0" prefWidth="640.0" />
-      <Text fx:id="qstSuiminJikan" layoutX="10.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="睡眠時間" wrappingWidth="120" />
-      <Text fx:id="qstSuimin" layoutX="10.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="自分にとって良い&#10;睡眠習慣を実行する" wrappingWidth="120" />
-      <Text fx:id="qstAlcohol" layoutX="10.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="アルコール摂取20ｇ&#10;以内(休肝日含む)" wrappingWidth="120" />
-      <Text fx:id="qstShokuseikatsu1" layoutX="10.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="朝食を食べる" wrappingWidth="120" />
-      <Text fx:id="qstShokuseikatsu2" layoutX="10.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ごはんを普通盛にする・&#10;おかわりしない" wrappingWidth="120" />
-      <Text fx:id="qstShokuseikatsu3" layoutX="10.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="糖分を多く含む&#10;清涼飲料水を飲まない" wrappingWidth="120" />
-      <Text fx:id="qstShokuseikatsu4" layoutX="10.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="糖質を多く含む&#10;間食を控える" wrappingWidth="120" />
-      <Text fx:id="qstShokuseikatsu5" layoutX="10.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="夕食(飲酒)後の夜食&#10;(締め)を食べない" wrappingWidth="120" />
-      <Text fx:id="qstGekkanEvent" layoutX="10.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="食事は就寝の&#10;2時間前までに済ませる" wrappingWidth="120" />
-      <Button fx:id="saveButton" layoutX="728.0" layoutY="445.0" mnemonicParsing="false" onAction="#save" text="保存" />
+      <Text fx:id="qstWalking" layoutX="10.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ウォーキング" wrappingWidth="120" />
+      <Text fx:id="qstSuiminJikan" layoutX="10.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="睡眠時間" wrappingWidth="120" />
+      <Text fx:id="qstSuimin" layoutX="10.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="自分にとって良い&#10;睡眠習慣を実行する" wrappingWidth="120" />
+      <Text fx:id="qstAlcohol" layoutX="10.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="アルコール摂取20ｇ&#10;以内(休肝日含む)" wrappingWidth="120" />
+      <Text fx:id="qstShokuseikatsu1" layoutX="10.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="朝食を食べる" wrappingWidth="120" />
+      <Text fx:id="qstShokuseikatsu2" layoutX="10.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ごはんを普通盛にする・&#10;おかわりしない" wrappingWidth="120" />
+      <Text fx:id="qstShokuseikatsu3" layoutX="10.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="糖分を多く含む&#10;清涼飲料水を飲まない" wrappingWidth="120" />
+      <Text fx:id="qstShokuseikatsu4" layoutX="10.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="糖質を多く含む&#10;間食を控える" wrappingWidth="120" />
+      <Text fx:id="qstShokuseikatsu5" layoutX="10.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="夕食(飲酒)後の夜食&#10;(締め)を食べない" wrappingWidth="120" />
+      <Text fx:id="qstGekkanEvent" layoutX="10.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="食事は就寝の&#10;2時間前までに済ませる" wrappingWidth="120" />
+      <Text fx:id="message" fill="RED" layoutX="133.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="474.13671875" />
+      <Button fx:id="cancelButton" layoutX="629.0" layoutY="475.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="62.0" text="キャンセル" />
+      <Button fx:id="saveButton" layoutX="706.0" layoutY="475.0" mnemonicParsing="false" onAction="#save" prefHeight="25.0" prefWidth="62.0" text="保存" />
+      <ScrollPane layoutX="130.0" layoutY="15.0" prefHeight="450.0" prefWidth="640.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="900.0">
+               <children>
+                  <CheckBox layoutX="31.0" layoutY="129.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="31.0" layoutY="168.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="31.0" layoutY="207.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="31.0" layoutY="246.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="31.0" layoutY="284.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="31.0" layoutY="324.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="31.0" layoutY="363.0" mnemonicParsing="false" />
+                  <CheckBox layoutX="31.0" layoutY="402.0" mnemonicParsing="false" />
+                  <TextField layoutX="14.0" layoutY="84.0" prefHeight="25.0" prefWidth="55.0" />
+                  <TextField layoutX="14.0" layoutY="44.0" prefHeight="25.0" prefWidth="55.0" />
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

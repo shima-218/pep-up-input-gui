@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import common.Values;
 import dataInOut.PropertiesReadWrite;
 
 public class SuiminJikanContent extends Content{
@@ -16,7 +17,7 @@ public class SuiminJikanContent extends Content{
 		return suiminJikanContent;
 	};
 
-	private final int number = 3;
+	private final int number = Values.SUIMINJIKAN_NUMBER;
 
 	public void input(WebDriver driver,Actions actions) {
 		super.input(driver, actions, number);
@@ -24,14 +25,16 @@ public class SuiminJikanContent extends Content{
 
 	//睡眠時間入力
 	public void dayInput(WebDriver driver) {
-		WebElement form = driver.findElement(By.xpath("//input[contains(@class,'ScskMileageModalComponents__ScskMileageModalForm-ycydyz-5 fENdUQ')]"));
+		//WebElement form = driver.findElement(By.xpath("//input[contains(@class,'ycydyz-5 bYPBDf')]"));
+		WebElement form = driver.findElement(By.xpath("//div[@role='presentation']/div[3]/div[2]/form/input"));
 		form.clear();
 		form.sendKeys("7");
 	}
 
 	//記録
 	public void popUpClose(WebDriver driver) {
-		driver.findElement(By.xpath("//button[contains(@class,'ScskMileageModalComponents__ScskMileageModalSubmitButton-ycydyz-12 gEBqNI')]")).click();
+		//driver.findElement(By.xpath("//button[contains(@class,'ycydyz-12 eUifyF')]")).click();
+		driver.findElement(By.xpath("//div[@role='presentation']/div[3]/div[2]/form/div/button")).click();
 		//スリープをかけないと次のボタンが押せない
 		try {
 			Thread.sleep(Integer.parseInt(PropertiesReadWrite.ReadProperties().getProperty("waitTime")));

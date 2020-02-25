@@ -34,7 +34,7 @@
       <Button fx:id="settingButton" layoutX="22.0" layoutY="259.0" mnemonicParsing="false" onAction="#setting" prefHeight="30.0" prefWidth="35.0" AnchorPane.leftAnchor="22.0" />
       <ImageView disable="true" fitHeight="16.0" fitWidth="16.0" layoutX="32.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../img/haguruma.png" />
+            <Image url="@haguruma.png" />
          </image>
       </ImageView>
       <Text fx:id="warning" fill="RED" layoutX="16.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" textAlignment="CENTER" wrappingWidth="263.6484375" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" />

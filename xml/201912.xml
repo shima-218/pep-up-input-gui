@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <InputValues>
-	<Walking>
+	<Content>
+	  <title>Walking</title>
 	  <qst number="1">
 	    8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000, 8000
 	  </qst>
-	</Walking>
-	<SuiminJikan>
+	</Content>
+	<Content>
+	  <title>SuiminJikan</title>
 	  <qst number="1">
 	    7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7
 	  </qst>
-	</SuiminJikan>
-	<Suimin>
+	</Content>
+	<Content>
+	  <title>Suimin</title>
 	  <qst number="1">
 	    true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true
 	  </qst>
-	</Suimin>
-	<Alcohol>
+	</Content>
+	<Content>
+	  <title>Alcohol</title>
 	  <qst number="1">
 	    true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true
 	  </qst>
-	</Alcohol>
-	<Shokuseikatsu>
+	</Content>
+	<Content>
+	  <title>Shokuseikatsu</title>
 	  <qst number="1">
 	    true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true
 	  </qst>
@@ -36,10 +41,11 @@
 	  <qst number="5">
 	    true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true
 	  </qst>
-	</Shokuseikatsu>
-	<GekkanEvent>
+	</Content>
+	<Content>
+	  <title>GekkanEvent</title>
 	  <qst number="1">
 	    true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true
 	  </qst>
-	</GekkanEvent>
+	</Content>
 </InputValues>

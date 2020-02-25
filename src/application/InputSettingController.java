@@ -11,6 +11,9 @@ import javafx.scene.text.Text;
 public class InputSettingController implements Initializable{
 
 	@FXML
+	private Text qstWalking;
+
+	@FXML
 	private Text qstSuiminJikan;
 
 	@FXML
@@ -38,7 +41,13 @@ public class InputSettingController implements Initializable{
 	private Text qstGekkanEvent;
 
 	@FXML
+	private Text message;
+
+	@FXML
 	private Button saveButton;
+
+	@FXML
+	private Button cancelButton;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -47,7 +56,21 @@ public class InputSettingController implements Initializable{
 
 	//ボタン押下時
 	public void save() {
+		//保存
 		//保存しましたとメッセージ表示
+		message.setText("保存しました");
+	}
+
+	public void cancel() {
+		cancelButton.getScene().getWindow().hide();
+	}
+
+	public Text getQstWalking() {
+		return qstWalking;
+	}
+
+	public void setQstWalking(Text qstWalking) {
+		this.qstWalking = qstWalking;
 	}
 
 	public Text getQstSuiminJikan() {
@@ -122,12 +145,28 @@ public class InputSettingController implements Initializable{
 		this.qstGekkanEvent = qstGekkanEvent;
 	}
 
+	public Text getMessage() {
+		return message;
+	}
+
+	public void setMessage(Text message) {
+		this.message = message;
+	}
+
 	public Button getSaveButton() {
 		return saveButton;
 	}
 
 	public void setSaveButton(Button saveButton) {
 		this.saveButton = saveButton;
+	}
+
+	public Button getCancelButton() {
+		return cancelButton;
+	}
+
+	public void setCancelButton(Button calcelButton) {
+		this.cancelButton = calcelButton;
 	}
 
 }

@@ -79,6 +79,7 @@ public class FormController implements Initializable{
 	//初期処理
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+
 		//現在の年月を取得
 		Calendar calendar = Calendar.getInstance();
 		int year = calendar.get(Calendar.YEAR);
