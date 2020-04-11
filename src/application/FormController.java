@@ -1,27 +1,16 @@
 package application;
 
-import java.net.URL;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.net.*;
+import java.util.*;
 
-import common.Values;
-import dataInOut.PropertiesReadWrite;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import pepUpInput.Option;
-import pepUpInput.PepUpInput;
+import dataInOut.*;
+import javafx.fxml.*;
+import javafx.scene.*;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.scene.text.*;
+import javafx.stage.*;
+import pepUpInput.*;
 
 public class FormController implements Initializable{
 
@@ -118,18 +107,19 @@ public class FormController implements Initializable{
 	//ボタン押下時
 	@FXML
 	public void inputSetting() {
-		try {
-			AnchorPane root = (AnchorPane) FXMLLoader.load((getClass().getResource("InputSetting.fxml")));
-			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			Stage stage = new Stage();
-			stage.setTitle(Values.APP_TITLE);
-			stage.setScene(scene);
-			stage.setResizable(false);
-			stage.showAndWait();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
+		warning.setText("この機能は準備中です。");
+//		try {
+//			AnchorPane root = (AnchorPane) FXMLLoader.load((getClass().getResource("InputSetting.fxml")));
+//			Scene scene = new Scene(root);
+//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//			Stage stage = new Stage();
+//			stage.setTitle(Values.APP_TITLE);
+//			stage.setScene(scene);
+//			stage.setResizable(false);
+//			stage.showAndWait();
+//		} catch(Exception e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	@FXML

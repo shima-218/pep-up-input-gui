@@ -1,13 +1,9 @@
 package dataInOut;
 
-import java.io.FileInputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Arrays;
-import java.util.Properties;
+import java.io.*;
+import java.util.*;
 
-import common.PepupUtilities;
+import common.*;
 
 public class PropertiesReadWrite {
 
@@ -38,6 +34,7 @@ public class PropertiesReadWrite {
 			properties.setProperty("browserQuit", wkProperties.getProperty("browserQuit"));
 			properties.setProperty("waitTime", wkProperties.getProperty("waitTime"));
 			properties.setProperty("checkBoxSetting", wkProperties.getProperty("checkBoxSetting"));
+			properties.setProperty("suiminJikan", wkProperties.getProperty("suiminJikan"));
 			properties.store(file,"settings");
 		}catch (Exception e) {
 			System.out.println(e.getMessage());

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="173.0" prefWidth="219.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="203.0" prefWidth="219.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingController">
    <children>
       <Text fx:id="saveUserIdText" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ユーザーIDを保存する" />
       <CheckBox fx:id="saveUserId" layoutX="172.0" layoutY="20.0" mnemonicParsing="false" />
@@ -15,7 +15,10 @@
       <Text fx:id="waitTimeText" layoutX="14.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ウェイト" />
       <TextField fx:id="waitTimeBox" layoutX="109.0" layoutY="76.0" prefHeight="25.0" prefWidth="73.0" />
       <Text fx:id="waitTimeUnitText" layoutX="188.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ms" />
-      <Button fx:id="saveButton" layoutX="89.0" layoutY="140.0" mnemonicParsing="false" onAction="#save" text="保存" AnchorPane.leftAnchor="89.0" AnchorPane.rightAnchor="89.0" />
-      <Text fx:id="warning" fill="RED" layoutX="14.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" textAlignment="CENTER" wrappingWidth="189.53125" />
+      <Text fx:id="suiminJikanText" layoutX="14.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="入力睡眠時間" />
+      <TextField fx:id="suiminJikanBox" layoutX="109.0" layoutY="111.0" prefHeight="25.0" prefWidth="73.0" />
+      <Text fx:id="suiminJikanUnitText" layoutX="188.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="時間" />
+      <Button fx:id="saveButton" layoutX="89.0" layoutY="170.0" mnemonicParsing="false" onAction="#save" text="保存" AnchorPane.leftAnchor="89.0" AnchorPane.rightAnchor="89.0" />
+      <Text fx:id="warning" fill="RED" layoutX="14.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" textAlignment="CENTER" wrappingWidth="189.53125" />
    </children>
 </AnchorPane>

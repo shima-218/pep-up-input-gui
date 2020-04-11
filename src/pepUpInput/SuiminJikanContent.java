@@ -1,12 +1,10 @@
 package pepUpInput;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.*;
 
-import common.Values;
-import dataInOut.PropertiesReadWrite;
+import common.*;
+import dataInOut.*;
 
 public class SuiminJikanContent extends Content{
 
@@ -28,7 +26,7 @@ public class SuiminJikanContent extends Content{
 		//WebElement form = driver.findElement(By.xpath("//input[contains(@class,'ycydyz-5 bYPBDf')]"));
 		WebElement form = driver.findElement(By.xpath("//div[@role='presentation']/div[3]/div[2]/form/input"));
 		form.clear();
-		form.sendKeys("7");
+		form.sendKeys(PropertiesReadWrite.ReadProperties().getProperty("suiminJikan"));
 	}
 
 	//記録

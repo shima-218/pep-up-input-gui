@@ -1,16 +1,12 @@
 package application;
 
-import java.net.URL;
-import java.util.Properties;
-import java.util.ResourceBundle;
+import java.net.*;
+import java.util.*;
 
-import dataInOut.PropertiesReadWrite;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
+import dataInOut.*;
+import javafx.fxml.*;
+import javafx.scene.control.*;
+import javafx.scene.text.*;
 
 public class SettingController implements Initializable{
 
@@ -36,6 +32,15 @@ public class SettingController implements Initializable{
 	private Text waitTimeUnitText;
 
 	@FXML
+	private Text suiminJikanText;
+
+	@FXML
+	private TextField suiminJikanBox;
+
+	@FXML
+	private Text suiminJikanUnitText;
+
+	@FXML
 	private Text warning;
 
 	@FXML
@@ -52,12 +57,13 @@ public class SettingController implements Initializable{
 			browserQuit.setSelected(true);
 		}
 		waitTimeBox.setText(properties.getProperty("waitTime"));
+		suiminJikanBox.setText(properties.getProperty("suiminJikan"));
 	}
 
 	public void save() {
 		//入力値チェック
-		if(waitTimeBox.getText().equals("")) {
-			warning.setText("ウェイトの入力は必須です");
+		if("".equals(waitTimeBox.getText())||"".equals(suiminJikanBox.getText())) {
+			warning.setText("入力必須項目が未入力です");
 			return;
 		}
 		//保存
@@ -65,6 +71,7 @@ public class SettingController implements Initializable{
 		properties.setProperty("saveUserId", String.valueOf(saveUserId.isSelected()));
 		properties.setProperty("browserQuit", String.valueOf(browserQuit.isSelected()));
 		properties.setProperty("waitTime", waitTimeBox.getText());
+		properties.setProperty("suiminJikan", suiminJikanBox.getText());
 		PropertiesReadWrite.WriteProperties(properties);
 		//閉じる
 		 saveButton.getScene().getWindow().hide();
