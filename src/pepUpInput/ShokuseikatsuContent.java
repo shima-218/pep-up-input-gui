@@ -24,8 +24,7 @@ public class ShokuseikatsuContent extends Content{
 
 	//チェックボックスクリック
 	public void dayInput(WebDriver driver) {
-		//List<WebElement> questions = driver.findElements(By.xpath("//input[contains(@class,'ycydyz-8 eBsNfa')]"));
-		List<WebElement> questions = driver.findElements(By.xpath("//div[@role='presentation']/div[3]/div[3]/div/label/input"));
+		List<WebElement> questions = driver.findElements(By.xpath(Values.TAGPATH_INPUT_SHOKUSEIKATSU));
 		for(int questionNumber=0;questionNumber<=4;questionNumber++) {
 			if(!questions.get(questionNumber).isSelected()) {
 				questions.get(questionNumber).click();
@@ -35,8 +34,7 @@ public class ShokuseikatsuContent extends Content{
 
 	//閉じる
 	public void popUpClose(WebDriver driver) {
-		//driver.findElement(By.xpath("//button[contains(@class,'ycydyz-11 hgdJxW')]")).click();
-		driver.findElement(By.xpath("//div[@role='presentation']/div[3]/div[3]/div[6]/button")).click();
+		driver.findElement(By.xpath(Values.TAGPATH_CLOSE_SHOKUSEIKATSU)).click();
 	}
 
 }

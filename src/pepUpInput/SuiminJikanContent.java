@@ -23,16 +23,14 @@ public class SuiminJikanContent extends Content{
 
 	//睡眠時間入力
 	public void dayInput(WebDriver driver) {
-		//WebElement form = driver.findElement(By.xpath("//input[contains(@class,'ycydyz-5 bYPBDf')]"));
-		WebElement form = driver.findElement(By.xpath("//div[@role='presentation']/div[3]/div[2]/form/input"));
+		WebElement form = driver.findElement(By.xpath(Values.TAGPATH_INPUT_FORM));
 		form.clear();
 		form.sendKeys(PropertiesReadWrite.ReadProperties().getProperty("suiminJikan"));
 	}
 
 	//記録
 	public void popUpClose(WebDriver driver) {
-		//driver.findElement(By.xpath("//button[contains(@class,'ycydyz-12 eUifyF')]")).click();
-		driver.findElement(By.xpath("//div[@role='presentation']/div[3]/div[2]/form/div/button")).click();
+		driver.findElement(By.xpath(Values.TAGPATH_CLOSE_FORM)).click();
 		//スリープをかけないと次のボタンが押せない
 		try {
 			Thread.sleep(Integer.parseInt(PropertiesReadWrite.ReadProperties().getProperty("waitTime")));

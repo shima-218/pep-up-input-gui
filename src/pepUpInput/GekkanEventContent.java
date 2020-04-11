@@ -1,11 +1,9 @@
 package pepUpInput;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.*;
 
-import common.Values;
+import common.*;
 
 public class GekkanEventContent extends Content{
 
@@ -24,8 +22,7 @@ public class GekkanEventContent extends Content{
 
 	//チェックボックスクリック
 	public void dayInput(WebDriver driver) {
-		//WebElement question = driver.findElement(By.xpath("//input[contains(@class,'ycydyz-8 eBsNfa')]"));
-		WebElement question = driver.findElement(By.xpath("//div[@role='presentation']/div[3]/div[3]/div/label/input"));
+		WebElement question = driver.findElement(By.xpath(Values.TAGPATH_INPUT_CHECKBOX));
 		if(!question.isSelected()) {
 			question.click();
 		}
@@ -33,8 +30,7 @@ public class GekkanEventContent extends Content{
 
 	//閉じる
 	public void popUpClose(WebDriver driver) {
-		//driver.findElement(By.xpath("//button[contains(@class,'ycydyz-11 hgdJxW')]")).click();
-		driver.findElement(By.xpath("//div[@role='presentation']/div[3]/div[3]/div[2]/button")).click();
+		driver.findElement(By.xpath(Values.TAGPATH_CLOSE_CHECKBOX)).click();
 	}
 
 }

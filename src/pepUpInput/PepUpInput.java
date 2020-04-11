@@ -6,6 +6,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.interactions.*;
 
+import common.*;
 import dataInOut.*;
 
 public class PepUpInput {
@@ -44,10 +45,7 @@ public class PepUpInput {
 			driver.findElement(By.partialLinkText("わくわくマイレージの入力はこちら")).click();
 
 			//月選択
-			//driver.findElement(By.xpath("//select[contains(@class,'cdl733-10 bGLZj')]"))
-			//.sendKeys(inputYearMonth);
-			driver.findElement(By.xpath("//div[@id='app']/div/div[2]/div/div[2]/div/div[3]/select"))
-			.sendKeys(inputYearMonth);
+			driver.findElement(By.xpath(Values.TAGPATH_YEARMONTH)).sendKeys(inputYearMonth);
 
 			//入力
 			//歩数

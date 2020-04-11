@@ -1,16 +1,15 @@
 package pepUpInput;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.*;
+
+import common.*;
 
 public abstract class Content {
 
 	public void input(WebDriver driver,Actions actions,int number) {
 		//該当のエリアがあるか判定
-		String areaXpath = "//div[@id='app']/div/div[2]/div/div[2]/div/div[" + number + "]";
+		String areaXpath =  Values.TAGPATH_CONTENTAREA_1 + number + Values.TAGPATH_CONTENTAREA_2;
 		WebElement area = null;
 		try {
 			area = driver.findElement(By.xpath(areaXpath));
@@ -27,7 +26,8 @@ public abstract class Content {
 					actions.perform();
 				}
 				//クリックすべき日付を探す
-				String dayXpath = "//div[@id='app']/div/div[2]/div/div[2]/div/div[" + number + "]/div[2]/div/div[2]/div[2]/div[" + weekloop + "]/div[" + dayloop +"]/button";
+				String dayXpath = Values.TAGPATH_DAYBUTTON_1 + number + Values.TAGPATH_DAYBUTTON_2 + weekloop
+						+ Values.TAGPATH_DAYBUTTON_3 + dayloop + Values.TAGPATH_DAYBUTTON_4;
 				WebElement btn = null;
 				try {
 					btn = driver.findElement(By.xpath(dayXpath));
