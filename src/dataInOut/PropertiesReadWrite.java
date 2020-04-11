@@ -35,6 +35,7 @@ public class PropertiesReadWrite {
 			properties.setProperty("waitTime", wkProperties.getProperty("waitTime"));
 			properties.setProperty("checkBoxSetting", wkProperties.getProperty("checkBoxSetting"));
 			properties.setProperty("suiminJikan", wkProperties.getProperty("suiminJikan"));
+			properties.setProperty("walking", wkProperties.getProperty("walking"));
 			properties.store(file,"settings");
 		}catch (Exception e) {
 			System.out.println(e.getMessage());

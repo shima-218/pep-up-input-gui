@@ -32,6 +32,15 @@ public class SettingController implements Initializable{
 	private Text waitTimeUnitText;
 
 	@FXML
+	private Text walkingText;
+
+	@FXML
+	private TextField walkingBox;
+
+	@FXML
+	private Text walkingUnitText;
+
+	@FXML
 	private Text suiminJikanText;
 
 	@FXML
@@ -57,12 +66,13 @@ public class SettingController implements Initializable{
 			browserQuit.setSelected(true);
 		}
 		waitTimeBox.setText(properties.getProperty("waitTime"));
+		walkingBox.setText(properties.getProperty("walking"));
 		suiminJikanBox.setText(properties.getProperty("suiminJikan"));
 	}
 
 	public void save() {
 		//入力値チェック
-		if("".equals(waitTimeBox.getText())||"".equals(suiminJikanBox.getText())) {
+		if("".equals(waitTimeBox.getText())||"".equals(suiminJikanBox.getText())||"".equals(walkingBox.getText())) {
 			warning.setText("入力必須項目が未入力です");
 			return;
 		}
@@ -71,6 +81,7 @@ public class SettingController implements Initializable{
 		properties.setProperty("saveUserId", String.valueOf(saveUserId.isSelected()));
 		properties.setProperty("browserQuit", String.valueOf(browserQuit.isSelected()));
 		properties.setProperty("waitTime", waitTimeBox.getText());
+		properties.setProperty("walking", walkingBox.getText());
 		properties.setProperty("suiminJikan", suiminJikanBox.getText());
 		PropertiesReadWrite.WriteProperties(properties);
 		//閉じる

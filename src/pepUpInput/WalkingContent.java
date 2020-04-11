@@ -25,7 +25,7 @@ public class WalkingContent extends Content {
 	public void dayInput(WebDriver driver) {
 		WebElement form = driver.findElement(By.xpath(Values.TAGPATH_INPUT_FORM));
 		form.clear();
-		form.sendKeys("8000");
+		form.sendKeys(PropertiesReadWrite.ReadProperties().getProperty("walking"));
 	}
 
 	//記録
