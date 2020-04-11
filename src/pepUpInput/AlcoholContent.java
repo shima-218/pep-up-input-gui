@@ -5,7 +5,7 @@ import org.openqa.selenium.interactions.*;
 
 import common.*;
 
-public class AlcoholContent extends Content{
+public class AlcoholContent extends CheckboxContent{
 
 	//singleton
 	private static AlcoholContent alcoholContent = new AlcoholContent();
@@ -18,19 +18,6 @@ public class AlcoholContent extends Content{
 
 	public void input(WebDriver driver,Actions actions) {
 		super.input(driver, actions, number);
-	}
-
-	//チェックボックスクリック
-	public void dayInput(WebDriver driver) {
-		WebElement question = driver.findElement(By.xpath(Values.TAGPATH_INPUT_CHECKBOX));
-		if(!question.isSelected()) {
-			question.click();
-		}
-	}
-
-	//閉じる
-	public void popUpClose(WebDriver driver) {
-		driver.findElement(By.xpath(Values.TAGPATH_CLOSE_CHECKBOX)).click();
 	}
 
 }

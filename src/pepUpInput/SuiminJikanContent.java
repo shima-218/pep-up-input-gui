@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.*;
 import common.*;
 import dataInOut.*;
 
-public class SuiminJikanContent extends Content{
+public class SuiminJikanContent extends FormContent{
 
 	//singleton
 	private static SuiminJikanContent suiminJikanContent = new SuiminJikanContent();
@@ -26,17 +26,6 @@ public class SuiminJikanContent extends Content{
 		WebElement form = driver.findElement(By.xpath(Values.TAGPATH_INPUT_FORM));
 		form.clear();
 		form.sendKeys(PropertiesReadWrite.ReadProperties().getProperty("suiminJikan"));
-	}
-
-	//記録
-	public void popUpClose(WebDriver driver) {
-		driver.findElement(By.xpath(Values.TAGPATH_CLOSE_FORM)).click();
-		//スリープをかけないと次のボタンが押せない
-		try {
-			Thread.sleep(Integer.parseInt(PropertiesReadWrite.ReadProperties().getProperty("waitTime")));
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
 	}
 
 }
