@@ -1,16 +1,12 @@
 package pepUpInput;
 
-import java.io.IOException;
+import java.io.*;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.*;
+import org.openqa.selenium.interactions.*;
 
-import dataInOut.PropertiesReadWrite;
+import dataInOut.*;
 
 public class PepUpInput {
 
@@ -50,7 +46,7 @@ public class PepUpInput {
 			//月選択
 			//driver.findElement(By.xpath("//select[contains(@class,'cdl733-10 bGLZj')]"))
 			//.sendKeys(inputYearMonth);
-			driver.findElement(By.xpath("//div[@id='app']/div/div[2]/div/div[2]/div/div/div[3]/select"))
+			driver.findElement(By.xpath("//div[@id='app']/div/div[2]/div/div[2]/div/div[3]/select"))
 			.sendKeys(inputYearMonth);
 
 			//入力

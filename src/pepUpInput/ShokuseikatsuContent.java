@@ -1,13 +1,11 @@
 package pepUpInput;
 
-import java.util.List;
+import java.util.*;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.*;
 
-import common.Values;
+import common.*;
 
 public class ShokuseikatsuContent extends Content{
 
@@ -25,7 +23,6 @@ public class ShokuseikatsuContent extends Content{
 	}
 
 	//チェックボックスクリック
-	//TODO 質問項目が５つ
 	public void dayInput(WebDriver driver) {
 		//List<WebElement> questions = driver.findElements(By.xpath("//input[contains(@class,'ycydyz-8 eBsNfa')]"));
 		List<WebElement> questions = driver.findElements(By.xpath("//div[@role='presentation']/div[3]/div[3]/div/label/input"));
