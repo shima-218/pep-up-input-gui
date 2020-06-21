@@ -49,7 +49,6 @@ public class InputSettingController implements Initializable{
 	@FXML
 	private Button cancelButton;
 
-	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
 	}

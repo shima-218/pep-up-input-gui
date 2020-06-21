@@ -1,12 +1,16 @@
 package application;
 
-import java.net.*;
-import java.util.*;
+import java.net.URL;
+import java.util.Properties;
+import java.util.ResourceBundle;
 
-import dataInOut.*;
-import javafx.fxml.*;
-import javafx.scene.control.*;
-import javafx.scene.text.*;
+import dataInOut.PropertiesReadWrite;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 public class SettingController implements Initializable{
 
@@ -55,7 +59,6 @@ public class SettingController implements Initializable{
 	@FXML
 	private Button saveButton;
 
-	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		//初期表示
 		Properties properties = PropertiesReadWrite.ReadProperties();

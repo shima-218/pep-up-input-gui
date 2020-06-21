@@ -1,16 +1,26 @@
 package application;
 
-import java.net.*;
-import java.util.*;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.List;
+import java.util.ResourceBundle;
 
-import dataInOut.*;
-import javafx.fxml.*;
-import javafx.scene.*;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
-import javafx.scene.text.*;
-import javafx.stage.*;
-import pepUpInput.*;
+import dataInOut.PropertiesReadWrite;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import pepUpInput.Option;
+import pepUpInput.PepUpInput;
 
 public class FormController implements Initializable{
 
@@ -66,7 +76,6 @@ public class FormController implements Initializable{
 	private Text warning;
 
 	//初期処理
-	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
 		//現在の年月を取得
