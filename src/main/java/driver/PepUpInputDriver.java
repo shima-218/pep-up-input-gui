@@ -23,7 +23,7 @@ public class PepUpInputDriver {
 		Option option = new Option();
 		option.setUserId("");
 		option.setPassword("");
-		option.setInputYearMonth("2019年11月");
+		option.setInputYearMonth("2020年6月");
 		boolean[] inputOrNotArray = new boolean[6];
 		inputOrNotArray[0] = false;
 		inputOrNotArray[1] = false;

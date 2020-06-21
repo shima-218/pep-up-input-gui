@@ -1,13 +1,15 @@
 package pepUpInput;
 
-import java.io.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.*;
-import org.openqa.selenium.interactions.*;
-
-import common.*;
-import dataInOut.*;
+import common.Values;
+import dataInOut.PropertiesReadWrite;
 
 public class PepUpInput {
 
@@ -20,8 +22,12 @@ public class PepUpInput {
 		boolean[] inputOrNotArray = option.getInputOrNotArray();
 
 		// WebDriverの設定
+		//Mac
 		System.setProperty("webdriver.chrome.driver",
-				".\\exe\\chromedriver.exe");
+				"./exe/chromedriver");
+		//Win
+//		System.setProperty("webdriver.chrome.driver",
+//				".\\exe\\chromedriver.exe");
 
 		try {
 			WebDriver driver = new ChromeDriver();
@@ -79,13 +85,14 @@ public class PepUpInput {
 			}
 
 		}finally {
+			//Winのみ
 			//ドライバーを閉じる
-			Runtime rt = Runtime.getRuntime();
-			try {
-				rt.exec("taskkill /im chromedriver.exe /f");
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+//			Runtime rt = Runtime.getRuntime();
+//			try {
+//				rt.exec("taskkill /im chromedriver.exe /f");
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
 		}
 	}
 }
